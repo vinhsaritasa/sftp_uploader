@@ -32,11 +32,19 @@ $ ./sftp_uploader -r # for upload image from stdin
 Example with `cat`:
 
 ```bash
-cat < /home/vinh/Pictures/my-file.png | sftp_uploader -r
+# MacOS
+cat < /home/vinh/Pictures/my-file.png | app-arm64-darwin -r
+
+# Linux
+cat < /home/vinh/Pictures/my-file.png | app-amd64-linux -r
 ```
 
 Example with [flameshot](https://github.com/lupoDharkael/flameshot):
 
 ```bash
-$ flameshot gui -r  | ./sftp_uploader -r
+# MacOS
+$ /Applications/flameshot.app/Contents/MacOS/flameshot gui -r | ./app-arm64-darwin -r
+
+# Linux
+$ flameshot gui -r | ./app-amd64-linux -r
 ```
